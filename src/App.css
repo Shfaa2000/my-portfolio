@@ -1,0 +1,338 @@
+/* =====================
+   CSS Variables (Theme)
+===================== */
+:root {
+  --bg-main: #0f172a;
+  --bg-header: #111827;
+  --bg-input: #0f172a;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+
+  --border-dark: #1f2937;
+}
+
+/* =====================
+   Reset
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   Container
+===================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* =====================
+   Header
+===================== */
+.header {
+  background-color: var(--bg-header);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid rgb(97, 97, 97);
+}
+
+/* =====================
+   Logo + Name
+===================== */
+.ln {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* =====================
+   Navigation
+===================== */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: var(--primary);
+}
+
+/* =====================
+   Search Input
+===================== */
+.search-wrapper {
+  position: relative;
+  width: 180px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: 3px 10px 3px 30px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--text-main);
+  outline-style: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* =====================
+   Icons
+===================== */
+.contact svg {
+  font-size: 15px;
+}
+
+.contact a:hover svg {
+  color: var(--secondary);
+}
+
+/* =====================
+   Responsive (Basic)
+===================== */
+@media (max-width: 768px) {
+  .contact {
+    gap: 14px;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+}
+.developer{
+  text-align: center;
+}
+.full{
+  display: flex;
+}
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+}
+
+/* Developer label */
+.developer {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* Layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Text */
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Image */
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.15);
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .developer {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+/* =====================
+   ABOUT SECTION
+===================== */
+.about {
+  padding: 100px 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Text */
+.about-text-wrapper {
+  max-width: 520px;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Card */
+.about-card {
+  background-color: #020617;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* CV Link */
+.about-cv {
+  font-size: 14px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.about-cv:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
