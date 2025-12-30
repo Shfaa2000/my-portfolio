@@ -1,0 +1,99 @@
+/* =====================
+   Header
+===================== */
+.header {
+  background-color: var(--bg-main);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid rgb(97, 97, 97);
+}
+/* =====================
+   Logo + Name
+===================== */
+.ln {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 36px;
+  height: 36px;
+}
+.name {
+  font-weight: 600;
+  font-size: 16px;
+}
+/* =====================
+   Navigation
+===================== */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+.contact a:hover {
+  color: var(--bg-brand);
+}
+/* =====================
+   Search Input
+===================== */
+.search-wrapper {
+  position: relative;
+  width: 180px;
+  background-color: white;
+  border-radius: 12px;
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.search-input {
+  width: 100%;
+  padding: 3px 10px 3px 30px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: black;
+  outline-style: none;
+}
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+.search-input:focus {
+  outline: none;
+}
+/* =====================
+   Responsive (Basic)
+===================== */
+@media (max-width: 768px) {
+  .contact {
+    gap: 14px;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+}
+.developer{
+  font-size: 60px !important;
+  text-align: center;
+}

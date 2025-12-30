@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub, FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.svg';
+import '../css/Header.css';
 
 const Header = () => {
   return (
@@ -11,12 +12,10 @@ const Header = () => {
           <img src={logo} alt="logo" className="logo" />
           <span className="name">Shfaa Nakour</span>
         </div>
-
         {/* Navigation */}
         <nav className="contact">
           <Link to="/">Home</Link>
           <Link to="/blogs">Blogs</Link>
-
           {/* Search */}
           <div className="search-wrapper">
             <FaSearch className="search-icon" />
@@ -26,23 +25,21 @@ const Header = () => {
               className="search-input"
             />
           </div>
-
           {/* Social links */}
           <a
             href="https://www.linkedin.com/in/shfaa-nakour-45a000339/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin />
+            <FaLinkedin color='#12F7D6'/>
             <span>LinkedIn</span>
           </a>
-
           <a
             href="https://github.com/your-github"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub />
+            <FaGithub color='#12F7D6'/>
             <span>GitHub</span>
           </a>
         </nav>

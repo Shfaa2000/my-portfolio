@@ -1,0 +1,59 @@
+/* =====================
+   ABOUT SECTION
+===================== */
+.about {
+  padding: 100px 0;
+  background-color: var(--bg-section);
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 80px;
+}
+/* Text */
+.about-text-wrapper {
+  max-width: 520px;
+}
+.about-title {
+  width: fit-content;
+  border: 1px solid #12F7D6;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--bg-main);
+}
+.about-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  background-color: var(--bg-main);
+  padding: 15px;
+  border-radius: 10px;
+}
+/* Card */
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.about-card img {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

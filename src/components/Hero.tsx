@@ -1,44 +1,44 @@
-import React from 'react';
-import hero from '../assets/hero.jpg'
+import React from "react";
+import hero from "../assets/hero.jpg";
+import '../css/Hero.css';
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="container">
-
-        {/* Role */}
-        <p className="developer">Developer</p>
-
-        <div className="hero-content">
-          {/* Left: Text */}
-          <div className="hero-text">
-            <p className="hero-subtitle">Hello, I’m</p>
-
-            <h1 className="hero-title">
-              Shfaa Nakour
-            </h1>
-
-            <p className="hero-description">
-              Frontend Developer specialized in React,
-              with experience in Artificial Intelligence
-              and Python.
-            </p>
-
-            <div className="hero-actions">
-              <button className="btn primary">View Projects</button>
-              <button className="btn secondary">Contact Me</button>
-            </div>
+      <h1 className="hero-watermark">Developer</h1>
+      <div className="hero-container">
+        {/* Left Card */}
+        <div className="hero-card">
+          <img src={hero} alt="Profile" className="card-avatar" />
+          <h3>Shfaa</h3>
+          <p className="card-role">Frontend Developer</p>
+          <ul className="card-info">
+          <li>📧 shfaa@email.com</li>
+          <li>🌐 shfaa.dev</li>
+          </ul>
+          <div className="card-skills">
+          <span>React</span>
+          <span>Vite</span>
+          <span>Python</span>
           </div>
-
-          {/* Right: Image */}
-          <div className="hero-image">
-            <img src={hero} alt="Profile" />
-          </div>
+          <button className="card-btn">Download CV</button>
         </div>
-
+        {/* Center Content */}
+        <div className="hero-content">
+          <h2>
+            <p>Hey</p>
+            I’m <span>Shfaa</span>, <br />
+            Frontend Developer
+          </h2>
+          <p className="hero-desc">
+            I build modern web interfaces and smart systems using
+            React and Python.
+          </p>
+          <button className="hero-main-btn">Let’s Talk</button>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

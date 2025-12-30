@@ -1,0 +1,119 @@
+/* =====================
+   SKILLS SECTION
+===================== */
+.skills {
+  background: #1f262d;
+  padding: 100px 40px;
+  color: #e6f1f1;
+  text-align: center;
+}
+/* ===== Header ===== */
+.skills-header {
+  margin-bottom: 50px;
+}
+.skills-icon {
+  font-size: 48px;
+  color: #5eead4;
+  margin-bottom: 10px;
+}.skills-header h2 {
+  font-size: 36px;
+  color: #5eead4;
+  margin-bottom: 10px;
+}
+.skills-header p {
+  font-size: 14px;
+  color: #b9c6c6;
+}
+/* ===== Cards ===== */
+.skills-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+.skill-card {
+  /* background: #a7f5e8; */
+  border-radius: 14px;
+  padding: 15px 20px;
+  min-width: 220px;
+  border-left: 6px solid #5eead4;
+  border-right: 1px solid #5eead4;
+  border-top: 1px solid #5eead4;
+  border-bottom: 1px solid #5eead4;
+}
+.skill-card h3 {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.skill-card p {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+/* ===== Icons Layout ===== */
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+/* ===== Skill Item ===== */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+/* Circle */
+.skill-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+.skill-circle svg {
+  font-size: 34px;
+  color: #ffffff;
+}
+/* Name */
+.skill-item span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #e6f1f1;
+}
+/* Hover */
+.skill-circle:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+/* ===== Colors ===== */
+.skill-item.html .skill-circle {
+  background-color: #e34c26;
+}
+.skill-item.css .skill-circle {
+  background-color: #264de4;
+}
+.skill-item.python .skill-circle {
+  background-color: #3776ab;
+}
+.skill-item.react .skill-circle {
+  background-color: #61dafb;
+}
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .skills-header h2 {
+    font-size: 28px;
+  }
+  .skill-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .skill-circle svg {
+    font-size: 30px;
+  }
+}
