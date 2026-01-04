@@ -54,7 +54,7 @@ a {
 }
 .footer-center a {
   color: var(--text-muted);
-  transition: color 0.3s ease;
+  transition: color 0.3s easeOut;
 }
 /* Responsive */
 @media (max-width: 768px) {

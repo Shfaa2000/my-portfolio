@@ -1,4 +1,3 @@
-import React from "react";
 import hero from "../assets/hero.jpg";
 import '../css/Hero.css';
 import { motion } from "framer-motion";

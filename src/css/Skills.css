@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  transition: all 0.3s ease;
+  transition: all 0.3s easeOut;
 }
 .skill-circle svg {
   font-size: 34px;

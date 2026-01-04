@@ -115,7 +115,7 @@
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s easeOut;
 }
 .card-btn:hover {
   background-color: #3dd5bf;
@@ -150,7 +150,7 @@
   border-radius: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s easeOut;
 }
 .hero-main-btn:hover {
   background-color: #5eead4;

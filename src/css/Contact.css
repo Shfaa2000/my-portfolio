@@ -93,7 +93,7 @@
   color: black;
   font-size: 12px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s easeOut;
   display: block;
   justify-content: center;
   margin-left: auto;
