@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { motion } from "framer-motion";
 import { Link } from 'react-router-dom'
 import blogImage from '../assets/blog1.jpg';
 import '../css/Blogs.css';
@@ -7,7 +8,11 @@ function BlogsPreview() {
   return (
     <section className="blogs-section">
       <div className="container">
-        <h2 className="blogs-heading">Blogs</h2>
+        <motion.h2 className="blogs-heading"
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true }}>Blogs</motion.h2>
         <p className="blogs-text">
           My thoughts on technologies and business
         </p>

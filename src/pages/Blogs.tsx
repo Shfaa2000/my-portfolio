@@ -1,11 +1,36 @@
 import React from 'react';
 import Header from '../components/Header';
+import { motion } from "framer-motion";
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom'
 import blogImage from '../assets/blog1.jpg';
 import '../css/Blogs.css';
 
 function Blogs() {
+  const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
   return (
     <section>
       <Header/>
@@ -21,8 +46,12 @@ function Blogs() {
           </button>
         </div>
         {/* Blog Card */}
-        <div className="blogs-grid">
-          <article className="blog-card">
+        <motion.div className="blogs-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+          <motion.article className="blog-card" variants={itemVariants}>
             {/* Image */}
             <div className="blog-image">
               <img src={blogImage} alt="Web Developer" />
@@ -41,10 +70,14 @@ function Blogs() {
                 Read more →
               </Link>
             </div>
-          </article>
-        </div>
-        <div className="blogs-grid">
-          <article className="blog-card">
+          </motion.article>
+        </motion.div>
+        <motion.div className="blogs-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+          <motion.article className="blog-card" variants={itemVariants}>
             {/* Image */}
             <div className="blog-image">
               <img src={blogImage} alt="Web Developer" />
@@ -63,10 +96,14 @@ function Blogs() {
                 Read more →
               </Link>
             </div>
-          </article>
-        </div>
-        <div className="blogs-grid">
-          <article className="blog-card">
+          </motion.article>
+        </motion.div>
+        <motion.div className="blogs-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+          <motion.article className="blog-card" variants={itemVariants}>
             {/* Image */}
             <div className="blog-image">
               <img src={blogImage} alt="Web Developer" />
@@ -85,10 +122,14 @@ function Blogs() {
                 Read more →
               </Link>
             </div>
-          </article>
-        </div>
-        <div className="blogs-grid">
-          <article className="blog-card">
+          </motion.article>
+        </motion.div>
+        <motion.div className="blogs-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+          <motion.article className="blog-card" variants={itemVariants}>
             {/* Image */}
             <div className="blog-image">
               <img src={blogImage} alt="Web Developer" />
@@ -107,10 +148,14 @@ function Blogs() {
                 Read more →
               </Link>
             </div>
-          </article>
-        </div>
-        <div className="blogs-grid">
-          <article className="blog-card">
+          </motion.article>
+        </motion.div>
+        <motion.div className="blogs-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+          <motion.article className="blog-card" variants={itemVariants}>
             {/* Image */}
             <div className="blog-image">
               <img src={blogImage} alt="Web Developer" />
@@ -129,8 +174,8 @@ function Blogs() {
                 Read more →
               </Link>
             </div>
-          </article>
-        </div>
+          </motion.article>
+        </motion.div>
       </div>
     </section>
       <Footer/>

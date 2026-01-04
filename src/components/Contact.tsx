@@ -1,11 +1,16 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import '../css/Contact.css';
 
 function Contact() {
   return (
     <section className="contact-section">
       <div className="contact-container">
-        <h2 className="contact-heading">Contact</h2>
+        <motion.h2 className="contact-heading"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}>Contact</motion.h2>
         <p className="contact-text">
           I'm currently available for freelance work
         </p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../css/Work.css";
 import work1 from '../assets/work1.jpg';
@@ -10,7 +11,11 @@ const Works = () => {
     <section className="works">
       {/* Header */}
       <div className="works-header">
-        <h2>Works</h2>
+        <motion.h2
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}>Works</motion.h2>
         <p>I had the pleasure of working with these awesome projects</p>
       </div>
       {/* Slider */}
