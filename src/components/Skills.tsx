@@ -1,8 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaReact, FaPython } from "react-icons/fa";
 import { HiOutlineCode } from "react-icons/hi";
 import "../css/Skills.css";
+import type { Variants } from "framer-motion";
 
 const Skills = () => {
   const containerVariants = {
@@ -14,17 +14,17 @@ const Skills = () => {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 15,
+    y: 30,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.45,
-      ease: "easeOut",
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
